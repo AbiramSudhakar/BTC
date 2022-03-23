@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-black-alt {
+  background: #191919;
+}
+.text-black-alt {
+  color: #191919;
+}
+.border-black-alt {
+  border-color: #191919;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+}
+.get_started_button {
+  outline: none;
+  border: #00bfe3 1px solid;
+  background: transparent;
+  padding: 15px 30px;
+  color: #00e1d6;
+  font-size: 150%;
+  text-decoration: none;
+}
+.get_started_button:hover {
+  background: #00768d;
+  transition: 0.3s;
+  color: white;
+}
