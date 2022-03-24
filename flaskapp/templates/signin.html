@@ -159,30 +159,16 @@
       </div>
     </nav>
     <div class="w-full flex flex-wrap">
-      <!-- Register Section -->
-
+      <!-- Login Section -->
       <div class="w-full md:w-1/2 flex flex-col">
         <div
           class="flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32"
         >
-          <br /><br /><br /><br /><br /><br />
-          <p style="color: white" class="text-center text-3xl">Join Us.</p>
+          <p style="color: white" class="text-center text-3xl">Welcome.</p>
           <form
             class="flex flex-col pt-3 md:pt-8"
             onsubmit="event.preventDefault();"
           >
-            <div class="flex flex-col pt-4">
-              <label style="color: white" for="name" class="text-lg"
-                >Name</label
-              >
-              <input
-                type="text"
-                id="name"
-                placeholder="Name"
-                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline"
-              />
-            </div>
-
             <div class="flex flex-col pt-4">
               <label style="color: white" for="email" class="text-lg"
                 >Email</label
@@ -207,29 +193,17 @@
               />
             </div>
 
-            <div class="flex flex-col pt-4">
-              <label style="color: white" for="confirm-password" class="text-lg"
-                >Confirm Password</label
-              >
-              <input
-                type="password"
-                id="confirm-password"
-                placeholder="Password"
-                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline"
-              />
-            </div>
-
             <input
               type="submit"
-              value="Register"
+              value="Log In"
               class="bg-black text-white font-bold text-lg hover:bg-gray-700 p-2 mt-8"
             />
           </form>
           <div class="text-center pt-12 pb-12">
             <p style="color: white">
-              Already have an account?
-              <a href="signin.html" class="underline font-semibold"
-                >Log in here.</a
+              Don't have an account?
+              <a href="signup.html" class="underline font-semibold"
+                >Register here.</a
               >
             </p>
           </div>
@@ -241,7 +215,6 @@
         <img
           class="object-cover w-full h-screen hidden md:block"
           src="https://source.unsplash.com/IXUM4cJynP0"
-          alt="Background"
         />
       </div>
     </div>
