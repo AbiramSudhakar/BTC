@@ -167,6 +167,8 @@
           <p style="color: white" class="text-center text-3xl">Welcome.</p>
           <form
             action="/loginconf"
+            method="POST"
+            enctype="multipart/form-data"
             class="flex flex-col pt-3 md:pt-8"
             onsubmit="event.preventDefault();"
           >
@@ -177,6 +179,7 @@
               <input
                 type="email"
                 id="email"
+                name="email"
                 placeholder="your@email.com"
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline"
               />
@@ -189,6 +192,7 @@
               <input
                 type="password"
                 id="password"
+                name="password"
                 placeholder="Password"
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline"
               />

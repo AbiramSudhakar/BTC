@@ -168,8 +168,10 @@
           <br /><br /><br /><br /><br /><br />
           <p style="color: white" class="text-center text-3xl">Join Us.</p>
           <form
+            action="/signupconf"
+            method="POST"
+            enctype="multipart/form-data"
             class="flex flex-col pt-3 md:pt-8"
-            onsubmit="event.preventDefault();"
           >
             <div class="flex flex-col pt-4">
               <label style="color: white" for="name" class="text-lg"
@@ -178,6 +180,7 @@
               <input
                 type="text"
                 id="name"
+                name="name"
                 placeholder="Name"
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline"
               />
@@ -190,7 +193,19 @@
               <input
                 type="email"
                 id="email"
+                name="email"
                 placeholder="your@email.com"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline"
+              />
+            </div>
+
+            <div class="flex flex-col pt-4">
+              <label style="color: white" for="dob" class="text-lg">DOB</label>
+              <input
+                type="date"
+                id="dob"
+                name="dob"
+                placeholder="dob"
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
@@ -202,28 +217,18 @@
               <input
                 type="password"
                 id="password"
+                name="password"
                 placeholder="Password"
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
 
-            <div class="flex flex-col pt-4">
-              <label style="color: white" for="confirm-password" class="text-lg"
-                >Confirm Password</label
-              >
-              <input
-                type="password"
-                id="confirm-password"
-                placeholder="Password"
-                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline"
-              />
-            </div>
-
-            <input
+            <button
               type="submit"
-              value="Register"
               class="bg-black text-white font-bold text-lg hover:bg-gray-700 p-2 mt-8"
-            />
+            >
+              Register
+            </button>
           </form>
           <div class="text-center pt-12 pb-12">
             <p style="color: white">
