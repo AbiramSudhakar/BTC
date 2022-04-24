@@ -28,6 +28,9 @@ def loginconf():
     pw=request.form['password']
     myconn=sqlite3.connect("./database/user.db")
     mycur=myconn.cursor()
+@pp.route("/wallet")
+def wallet():
+    return render_template("wallet.html")
     
 
 if __name__ == "__main__":

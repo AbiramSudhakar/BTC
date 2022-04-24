@@ -1,5 +1,5 @@
 var i = 0;
-var txt = "Innovative Payment Technology"; /* The text */
+var txt = "What is a Wallet?"; /* The text */
 var speed = 90; /* The speed/duration of the effect in milliseconds */
 
 function typeWriter() {
