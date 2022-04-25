@@ -28,12 +28,11 @@ def loginconf():
     pw=request.form['password']
     myconn=sqlite3.connect("./database/user.db")
     mycur=myconn.cursor()
-<<<<<<< HEAD
-@pp.route("/wallet")
+
+@app.route("/wallet")
 def wallet():
     return render_template("wallet.html")
-    
-=======
+
 
 @app.route("/signupconf", methods=['POST'])
 def signupconf():
@@ -52,7 +51,7 @@ def signupconf():
     myconn.commit()
     myconn.close()
     return render_template('signin.html')
->>>>>>> eeb916bdcbd84ec7d3f5d4b04b1a6338da76f0f8
+
 
 if __name__ == "__main__":
     app.run(debug=True)
