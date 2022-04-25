@@ -4,6 +4,8 @@ from datetime import datetime
 import os
 import sqlite3
 
+from graphviz import render
+
 app = Flask(__name__)
 
 @app.route("/")
@@ -13,6 +15,14 @@ def home():
 @app.route("/news")
 def news():
     return render_template("index.html")
+
+@app.route("/analytics")
+def analytics():
+    return render_template("analytics.html")
+
+@app.route("/wallet")
+def wallet():
+    return render_template("wallet.html")
 
 @app.route("/signin")
 def signin():
