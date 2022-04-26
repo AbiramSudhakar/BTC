@@ -39,6 +39,11 @@ def loginconf():
     myconn=sqlite3.connect("./database/user.db")
     mycur=myconn.cursor()
 
+@app.route("/wallet")
+def wallet():
+    return render_template("wallet.html")
+
+
 @app.route("/signupconf", methods=['POST'])
 def signupconf():
     nm=request.form['name']
@@ -56,6 +61,7 @@ def signupconf():
     myconn.commit()
     myconn.close()
     return render_template('signin.html')
+
 
 if __name__ == "__main__":
     app.run(debug=True)
