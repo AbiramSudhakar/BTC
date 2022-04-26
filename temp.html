@@ -159,43 +159,206 @@
       </div>
     </nav>
 
+    <!--Container-->
     <div class="container w-full mx-auto pt-20">
       <div
-        class="w-full items-center px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal"
+        class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal"
       >
-        <br /><br /><br /><br /><br />
-        <div class="center">
-          <img src="../static/assets/image/logo.png" width="140" height="140" />
+        <!--Console Content-->
+
+        <div class="flex flex-wrap">
+          <div class="w-full md:w-1/2 xl:w-1/3 p-3">
+            <!--Metric Card-->
+            <div class="bg-gray-900 border border-gray-800 rounded shadow p-2">
+              <div class="flex flex-row items-center">
+                <div class="flex-shrink pr-4">
+                  <div class="rounded p-3 bg-green-600">
+                    <i class="fa fa-wallet fa-2x fa-fw fa-inverse"></i>
+                  </div>
+                </div>
+                <div class="flex-1 text-right md:text-center">
+                  <h5 class="font-bold uppercase text-gray-400">
+                    Crypto Currency
+                  </h5>
+                  <h3 class="font-bold text-3xl text-gray-600">
+                    Choose Currency
+                    <span class="text-green-500"
+                      ></span>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!--/Metric Card-->
+          </div>
+          <div class="w-full md:w-1/2 xl:w-1/3 p-3">
+            <!--Metric Card-->
+            <div class="bg-gray-900 border border-gray-800 rounded shadow p-2">
+              <div class="flex flex-row items-center">
+                <div class="flex-shrink pr-4">
+                  <div class="rounded p-3 bg-indigo-600">
+                    <i class="fas fa-tasks fa-2x fa-fw fa-inverse"></i>
+                  </div>
+                </div>
+                <div class="flex-1 text-right md:text-center">
+                  <h5 class="font-bold uppercase text-gray-400">Crypto Currency</h5>
+                  <h3 class="font-bold text-3xl text-gray-600">BTC</h3>
+                </div>
+              </div>
+            </div>
+            <!--/Metric Card-->
+          </div>
+          <div class="w-full md:w-1/2 xl:w-1/3 p-3">
+            <!--Metric Card-->
+            <div class="bg-gray-900 border border-gray-800 rounded shadow p-2">
+              <div class="flex flex-row items-center">
+                <div class="flex-shrink pr-4">
+                  <div class="rounded p-3 bg-red-600">
+                    <i class="fas fa-inbox fa-2x fa-fw fa-inverse"></i>
+                  </div>
+                </div>
+                <div class="flex-1 text-right md:text-center">
+                  <h5 class="font-bold uppercase text-gray-400">BTC</h5>
+                  <h3 class="font-bold text-3xl text-gray-600">
+                    <input type="number" id="crypto" name="crypto" class="font-bold uppercase text-gray-400" />
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!--/Metric Card-->
+          </div>
+          <div class="w-full md:w-1/2 xl:w-1/3 p-3">
+            <!--Metric Card-->
+            <div class="bg-gray-900 border border-gray-800 rounded shadow p-2">
+              <div class="flex flex-row items-center">
+                <div class="flex-shrink pr-4">
+                  <div class="rounded p-3 bg-green-600">
+                    <i class="fa fa-wallet fa-2x fa-fw fa-inverse"></i>
+                  </div>
+                </div>
+                <div class="flex-1 text-right md:text-center">
+                  <h5 class="font-bold uppercase text-gray-400">
+                    Fiat Currency
+                  </h5>
+                  <h3 class="font-bold text-3xl text-gray-600">
+                    Choose Currency
+                    <span class="text-green-500"
+                      ></span>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!--/Metric Card-->
+          </div>
+          <div class="w-full md:w-1/2 xl:w-1/3 p-3">
+            <!--Metric Card-->
+            <div class="bg-gray-900 border border-gray-800 rounded shadow p-2">
+              <div class="flex flex-row items-center">
+                <div class="flex-shrink pr-4">
+                  <div class="rounded p-3 bg-indigo-600">
+                    <i class="fas fa-tasks fa-2x fa-fw fa-inverse"></i>
+                  </div>
+                </div>
+                <div class="flex-1 text-right md:text-center">
+                  <h5 class="font-bold uppercase text-gray-400">Fiat Currency</h5>
+                  <h3 class="font-bold text-3xl text-gray-600">USD</h3>
+                </div>
+              </div>
+            </div>
+            <!--/Metric Card-->
+          </div>
+          <div class="w-full md:w-1/2 xl:w-1/3 p-3">
+            <!--Metric Card-->
+            <div class="bg-gray-900 border border-gray-800 rounded shadow p-2">
+              <div class="flex flex-row items-center">
+                <div class="flex-shrink pr-4">
+                  <div class="rounded p-3 bg-red-600">
+                    <i class="fas fa-inbox fa-2x fa-fw fa-inverse"></i>
+                  </div>
+                </div>
+                <div class="flex-1 text-right md:text-center">
+                  <h5 class="font-bold uppercase text-gray-400">USD</h5>
+                  <h3 class="font-bold text-3xl text-gray-600">
+                    <%import json
+                      import requests
+                      key = "https://api.binance.com/api/v3/ticker/price?symbol="
+                      currencies = ["BTCUSDT", "DOGEUSDT", "LTCUSDT"]
+                      url = key+currencies[0]  
+                      data = requests.get(url)
+                      data = data.json()
+                      print(f"{data['price']}")
+                      %>
+                    <input type="number" id="fiat" name="fiat" class="font-bold uppercase text-gray-400" />
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!--/Metric Card-->
+          </div>
         </div>
-        <h1
-          style="font-size: 350%; font-weight: 700"
-          class="text-white text-center"
-        >
-          BITCOIN
-        </h1>
-        <h1
-          id="typewriter"
-          style="font-size: 200%; font-weight: 700; color: #00e1d6 !important"
-          class="text-white text-center"
-        ></h1>
-        <br /><br />
-        <div class="text-center">
-          <a
-            class="get_started_button"
-            href="https://bitcoin.org/en/getting-started"
-            target="_blank"
-            >Get Started!</a
-          >
-          <a class="get_started_button" href="/news">What is Bitcoin?</a>
-          <a
-            class="get_started_button"
-            href="https://bitcoin.org/en/buy"
-            target="_blank"
-            >Buy Bitcoin!</a
-          >
-        </div>
-      </div>
-    </div>
+
+        <!--Divider-->
+        <hr class="border-b-2 border-gray-600 my-8 mx-4" />
+
+        <div class="flex flex-row flex-wrap flex-grow mt-2">
+          <div class="w-full md:w-1/2 p-3">
+            <!--Graph Card-->
+            <div class="bg-gray-900 border border-gray-800 rounded shadow">
+              <div class="border-b border-gray-800 p-3">
+                <h5 class="font-bold uppercase text-gray-600">BID PRICE</h5>
+              </div>
+              <div class="p-5">
+                <img src="../static/assets/image/results/bidprice.png" alt="Bid price">
+
+              </div>
+            </div>
+            <!--/Graph Card-->
+          </div>
+
+          <div class="w-full md:w-1/2 p-3">
+            <!--Graph Card-->
+            <div class="bg-gray-900 border border-gray-800 rounded shadow">
+              <div class="border-b border-gray-800 p-3">
+                <h5 class="font-bold uppercase text-gray-600">ASK/SELL PRICE</h5>
+              </div>
+              <div class="p-5">
+                <img src="../static/assets/image/results/askprice.png" alt="Ask Price">
+              </div>
+            </div>
+            <!--/Graph Card-->
+          </div>
+
+          <!--Divider-->
+        <hr class="border-b-2 border-gray-600 my-8 mx-4" />
+
+        <div class="flex flex-row flex-wrap flex-grow mt-2">
+          <div class="w-full md:w-1/2 p-3">
+            <!--Graph Card-->
+            <div class="bg-gray-900 border border-gray-800 rounded shadow">
+              <div class="border-b border-gray-800 p-3">
+                <h5 class="font-bold uppercase text-gray-600">FORECAST</h5>
+              </div>
+              <div class="p-5">
+                <img src="../static/assets/image/results/forecast.png" alt="Forecast">
+
+              </div>
+            </div>
+            <!--/Graph Card-->
+          </div>
+
+          <div class="w-full md:w-1/2 p-3">
+            <!--Graph Card-->
+            <div class="bg-gray-900 border border-gray-800 rounded shadow">
+              <div class="border-b border-gray-800 p-3">
+                <h5 class="font-bold uppercase text-gray-600">CNN</h5>
+              </div>
+              <div class="p-5">
+                <img src="../static/assets/image/results/trade.png" alt="Trade">
+              </div>
+            </div>
+            <!--/Graph Card-->
+          </div>
+
+          
 
     <!-- Script file -->
     <script src="../static/assets/script/index.js"></script>
